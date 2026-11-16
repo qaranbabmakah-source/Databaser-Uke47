@@ -1,6 +1,6 @@
 # Uke47-Databaser
 
-Mandag – Steg 1: Start med behovet
+Mandag – Steg 1: Start med behovet 
 
 Forstå hvorfor FjordTek trenger en database, og hvilken informasjon systemet skal lagre.
 
