@@ -1,4 +1,4 @@
-# Uke47-Databaser
+# Ukeplan – databaser: struktur, ER-diagram, relasjoner og GDPR
 
 Mandag – Steg 1: Start med behovet 
 
