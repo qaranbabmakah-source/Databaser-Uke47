@@ -1,0 +1,28 @@
+Table kunde {
+  kundeID integer [pk]
+  Navn varshar
+  Epost varchar
+  Telefon varchar 
+}
+
+Table Ansatt {
+  AnsattID integer [pk]
+  Navn varchar 
+  Avdeling varchar
+  Epost varchar
+}
+
+Table Sak {
+  SakID integer [pk]
+  Tittle varchar 
+  Status varchar 
+  OppretteDato timestamp
+  KundeID integer [ not null]
+}
+
+Ref: kunde.kundeID < Sak.KundeID 
+
+Table Avdeling {
+  AvdelingID integer [pk]
+  Navn varchar
+}
