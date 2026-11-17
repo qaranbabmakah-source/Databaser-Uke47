@@ -250,7 +250,8 @@ KundeID ligger i Sak for å vise hvilken kunde supportsaken tilhører. Det bruke
 
 Videre utforskning – 
 
-<img width="945" height="424" alt="image" src="https://github.com/user-attachments/assets/a8246db2-ea43-4d80-af5b-96d6deb4d535" />
+<img width="950" height="429" alt="image" src="https://github.com/user-attachments/assets/598ef9d4-eee8-4179-9655-de1b4c853294" />
+
 
 Hva gjorde jeg?
 
