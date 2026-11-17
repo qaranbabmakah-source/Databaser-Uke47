@@ -355,6 +355,74 @@ Fordi BrukerID allerede viser hvem som har skrevet innlegget. Da unngår vi å l
 
 Steg 3 – oppgave B: kunde og bestilling
 
+<img width="956" height="436" alt="image" src="https://github.com/user-attachments/assets/7b387c2c-c806-4677-86d2-61798dc83798" />
+
+Hva gjorde jeg?
+
+Jeg brukte dbdiagram.io og laget et ER-diagram med to tabeller: Kunde og Bestilling.
+
+Kunde:
+
+KundeID – integer (PK)
+
+Navn – varchar
+
+Epost – varchar
+
+Bestilling:
+
+BestillingID – integer (PK)
+
+Dato – date
+
+Status – varchar
+
+KundeID – integer (FK)
+
+Jeg koblet tabellene sammen ved hjelp av KundeID.
+
+Hva lærte jeg?
+
+Jeg lærte hvordan to tabeller kan kobles sammen med en 1:M-relasjon.
+
+Én kunde kan ha mange bestillinger, men hver bestilling tilhører én kunde.
+
+KundeID i Bestilling viser hvilken kunde bestillingen tilhører.
+
+Resultat
+
+Jeg klarte å lage begge tabellene, markere primærnøkler (PK) og lage en 1:M-relasjon i dbdiagram.io.
+
+Jeg lærte hvordan primærnøkler og fremmednøkler brukes for å koble sammen tabeller og organisere informasjon i en database.
+
+Steg 4 – sammenlign de to modellene
+
+Hva er likt mellom de to relasjonene?
+
+Begge modellene har en 1:M-relasjon (én-til-mange).
+I den første modellen kan én bruker skrive mange innlegg.
+
+I den andre modellen kan én kunde ha mange bestillinger.
+
+Begge modellene bruker primærnøkler (PK) og fremmednøkler (FK) for å koble sammen tabellene.
+
+Hva lærte jeg?
+
+Jeg lærte at ulike databaser kan ha samme type relasjon, selv om de lagrer forskjellig informasjon.
+
+Begge modellene viser at én rad i den første tabellen kan være koblet til mange rader i den andre tabellen.
+
+Tirsdagens grunnoppgave
+
+Jeg laget to ER-diagrammer i dbdiagram.io: Bruker og Innlegg, og Kunde og Bestilling.
+
+Jeg markerte primærnøkler (PK) og brukte fremmednøkler (FK) for å koble tabellene sammen.
+
+Jeg lærte at én bruker kan skrive mange innlegg, og at én kunde kan ha mange bestillinger. Begge modellene har en 1:M-relasjon.
+
+Jeg har fullført tirsdagens grunnoppgave.
+
+
 
 
 
