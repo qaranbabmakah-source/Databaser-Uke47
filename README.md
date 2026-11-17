@@ -286,6 +286,76 @@ Hva lærte jeg?
 Jeg lærte hvordan et biblioteksystem kan organiseres med flere tabeller, primærnøkler og relasjoner.
 
 
+Tirsdag – les spesifikasjoner og tegn enkle relasjoner
+
+Stage 1 Oppgave – bruker og innlegg
+
+<img width="950" height="442" alt="image" src="https://github.com/user-attachments/assets/8a4867ce-4ce7-4033-84c9-408b0dd76db2" />
+
+
+Målet var å lage et enkelt ER-diagram med to tabeller og en 1:M-relasjon.
+
+Hva gjorde jeg?
+
+Jeg åpnet dbdiagram.io og opprettet to tabeller: Bruker og Innlegg.
+
+Bruker:
+
+BrukerID – integer (PK)
+
+Brukernavn – varchar
+
+Rolle – varchar
+
+Innlegg:
+
+InnleggID – integer (PK)
+
+Tittel – varchar
+
+Tekst – text
+
+BrukerID – integer (FK)
+
+Jeg koblet tabellene sammen ved hjelp av BrukerID.
+
+Hva lærte jeg?
+
+Jeg lærte hvordan to tabeller kan kobles sammen med en 1:M-relasjon.
+
+Én bruker kan skrive mange innlegg, men hvert innlegg tilhører én bruker.
+
+BrukerID i Innlegg viser hvilken bruker som har skrevet innlegget.
+
+Resultat
+
+Jeg klarte å lage begge tabellene, markere primærnøkler og lage en 1:M-relasjon i dbdiagram 
+
+
+Jeg lærte hvordan primærnøkler (PK) og fremmednøkler (FK) brukes for å koble sammen tabeller.
+
+Steg 2 – kontroller modellen
+
+Har begge tabellene en tydelig primærnøkkel?
+
+Ja, Bruker har BrukerID som PK, og Innlegg har InnleggID som PK.
+
+Ligger BrukerID i Innlegg som feltet som kobler tabellene sammen?
+ 
+Ja, BrukerID ligger i Innlegg og brukes som fremmednøkkel (FK) for å koble innlegget til riktig bruker.
+
+Viser relasjonen at én bruker kan ha mange innlegg?
+
+Ja, diagrammet viser en 1:M-relasjon. Én bruker kan skrive mange innlegg, men hvert innlegg tilhører én bruker.
+
+Hvorfor bør ikke Brukernavn kopieres inn i hvert innlegg?
+
+Fordi BrukerID allerede viser hvem som har skrevet innlegget. Da unngår vi å lagre samme informasjon flere ganger.
+
+
+Steg 3 – oppgave B: kunde og bestilling
+
+
 
 
 
