@@ -423,6 +423,202 @@ Jeg lærte at én bruker kan skrive mange innlegg, og at én kunde kan ha mange 
 Jeg har fullført tirsdagens grunnoppgave.
 
 
+Onsdag – fremmednøkler og flere relasjoner
+
+Steg 1 – fremmednøkkel
+
+<img width="949" height="425" alt="image" src="https://github.com/user-attachments/assets/0a36f46f-f3e5-47ab-a1b3-d222ff51320e" />
+
+Steg 1: Fremmednøkkel (FK)
+
+En fremmednøkkel (FK) er et felt som kobler sammen to tabeller.
+
+I FjordTek-modellen har jeg koblet tabellene Kunde og Sak sammen.
+
+KundeID er primærnøkkel (PK) i Kunde.
+
+KundeID er fremmednøkkel (FK) i Sak.
+
+
+Relasjonen mellom Kunde og Sak er 1:M.
+
+Det betyr at én kunde kan ha mange saker, men hver sak tilhører én kunde.
+
+Vi bruker KundeID for å koble tabellene sammen. Derfor trenger vi ikke å kopiere Navn og Epost inn i hver sak.
+
+Steg 2 – Koble Ansatt til Sak
+
+Jeg har koblet Ansatt og Sak sammen i FjordTek-modellen.
+
+AnsattID er primærnøkkel (PK) i Ansatt og fremmednøkkel (FK) i Sak.
+
+Relasjonen er 1:M. Det betyr at én ansatt kan arbeide med mange supportsaker, men hver supportsak er tildelt én ansatt.
+
+ Steg 3 – Samlet modell
+
+Jeg har laget en samlet ER-modell for FjordTek i dbdiagram.io.
+
+Modellen består av tre hovedtabeller: Kunde, Ansatt og Sak.
+
+Alle tre tabellene har en primærnøkkel (PK).
+
+Sak har to fremmednøkler (FK): KundeID og AnsattID.
+
+Det er to 1:M-relasjoner i modellen:
+
+Én kunde kan ha mange saker.
+
+Én ansatt kan arbeide med mange saker.
+
+Hver sak tilhører én kunde og er tildelt én ansatt.
+
+
+Steg 4: Test modellen med eksempeldata
+
+FjordTek – ER-modell
+
+Jeg har testet FjordTek-modellen med eksempeldata for å kontrollere at relasjonene fungerer riktig.
+
+Kan én kunde ha flere saker?
+
+Ja, én kunde kan ha flere saker. For eksempel har Kunde 17 både Sak 103 og Sak 108.
+
+Kan én ansatt ha flere saker?
+
+Ja, én ansatt kan arbeide med flere saker. For eksempel arbeider Ansatt 4 med Sak 103 og Sak 112.
+
+Kan du finne hvilken kunde sak 103 tilhører?
+
+Ja, Sak 103 tilhører Kunde 17, fordi KundeID er 17.
+
+Kan du finne hvilken ansatt som arbeider med sak 103?
+
+Ja, Ansatt 4 arbeider med Sak 103, fordi AnsattID er 4.
+
+Hvorfor gjør vi dette?
+
+Jeg bruker eksempeldata for å kontrollere at relasjonene fungerer riktig før vi bygger databasen. Dette hjelper oss å finne feil og unngå å 
+
+lagre samme informasjon flere ganger.
+
+Konklusjon
+
+FjordTek-modellen har to 1:M-relasjoner.
+
+Én kunde kan ha mange saker, og én ansatt kan arbeide med mange saker.
+
+KundeID og AnsattID er fremmednøkler (FK) i Sak. Disse brukes til å koble tabellene sammen.
+
+
+Steg 5: Les relasjonene som setninger
+
+I denne oppgaven har jeg jobbet med ER-modellen for FjordTek. Målet er å forstå hvordan tabellene Kunde, Sak og Ansatt er koblet sammen.
+
+Jeg har laget relasjonene i dbdiagram.io. Nå skal jeg forklare hva relasjonene betyr med vanlige setninger.
+
+Relasjonen mellom Kunde og Sak
+
+Én kunde kan ha mange saker, men hver sak tilhører bare én kunde.
+
+Dette er en 1:M-relasjon (én-til-mange).
+
+I tabellen Kunde er KundeID en primærnøkkel (PK). I tabellen Sak er KundeID en fremmednøkkel (FK).
+
+Fremmednøkkelen gjør at vi kan finne ut hvilken kunde en bestemt sak tilhører.
+
+For eksempel kan Kunde 17 ha både Sak 103 og Sak 108.
+
+Relasjonen mellom Ansatt og Sak
+
+Én ansatt kan arbeide med mange saker, men hver sak er tildelt én ansatt.
+
+Dette er også en 1:M-relasjon.
+
+I tabellen Ansatt er AnsattID en primærnøkkel (PK). I tabellen Sak er AnsattID en fremmednøkkel (FK).
+
+Denne fremmednøkkelen brukes for å finne ut hvilken ansatt som har ansvar for en sak.
+
+For eksempel kan Ansatt 4 arbeide med både Sak 103 og Sak 112.
+
+Hvorfor bruker vi fremmednøkler?
+
+Vi bruker fremmednøkler for å koble tabeller sammen uten å lagre den samme informasjonen flere ganger.
+
+For eksempel trenger vi ikke å skrive kundens navn og e-post i hver sak. Vi bruker KundeID for å finne informasjonen i tabellen Kunde.
+
+Dette gjør databasen enklere å organisere og oppdatere.
+
+Kontroll av ER-modellen
+
+Jeg har kontrollert at modellen har to riktige relasjoner:
+
+Kunde (1) → Sak (M)
+
+Ansatt (1) → Sak (M)
+
+Jeg har også kontrollert at Sak inneholder fremmednøklene KundeID og AnsattID.
+
+Begge relasjonene viser at én rad i en tabell kan være koblet til mange rader i en annen tabell.
+
+Konklusjon
+
+Jeg har lært hvordan jeg kan lese og forklare relasjoner i en ER-modell.
+
+Jeg forstår at én kunde kan ha mange saker, og at én ansatt kan arbeide med mange saker.
+
+Jeg har også lært at fremmednøkler brukes for å koble tabellene sammen.
+
+FjordTek-modellen viser to 1:M-relasjoner mellom Kunde, Ansatt og Sak.
+
+
+Stage 6. Finn riktig sted for fremmednøkkelen
+
+
+<img width="949" height="436" alt="image" src="https://github.com/user-attachments/assets/11b678b4-938d-44b1-8fb6-a1d74cebd523" />
+
+
+
+Jeg har laget en ER-modell med tabellene Kategori og Produkt i dbdiagram.io, ved siden av FjordTek-modellen.
+
+Én kategori kan ha mange produkter, men hvert produkt tilhører én kategori. Dette er en 1:M-relasjon.
+
+KategoriID er primærnøkkel (PK) i Kategori og fremmednøkkel (FK) i Produkt.
+
+Fremmednøkkelen ligger i Produkt fordi hvert produkt må være koblet til riktig kategori.
+
+Jeg har lært at fremmednøkkelen skal plasseres på mange-siden (M) i en 1:M-relasjon.
+
+Onsdagens grunnoppgave – FjordTek
+
+1. Hva er forskjellen mellom PK og FK?
+
+En primærnøkkel (PK) identifiserer hver rad i en tabell. En fremmednøkkel (FK) brukes til å koble en tabell til en annen tabell.
+
+2. Hvorfor ligger KundeID i Sak?
+
+KundeID ligger i Sak fordi hver sak tilhører én kunde. KundeID brukes som fremmednøkkel (FK) for å koble saken til riktig kunde.
+
+3. Hvorfor ligger AnsattID i Sak?
+
+AnsattID ligger i Sak fordi hver sak er tildelt én ansatt. AnsattID brukes som fremmednøkkel (FK) for å vise hvilken ansatt som har ansvar for saken.
+
+4. Hvilke to tabeller peker Sak til?
+
+Sak peker til tabellene Kunde og Ansatt gjennom fremmednøklene KundeID og AnsattID.
+
+Konklusjon
+
+Jeg har laget en ER-modell for FjordTek med to 1:M-relasjoner.
+
+Én kunde kan ha mange saker, og én ansatt kan arbeide med mange saker.
+
+Jeg har også testet modellen med eksempeldata og laget en egen ER-modell for Kategori og Produkt.
+
+Jeg har lært forskjellen mellom primærnøkkel (PK) og fremmednøkkel (FK), og hvordan fremmednøkler kobler tabeller sammen.
+ 
+
+
+
 
 
 
