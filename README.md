@@ -423,9 +423,9 @@ Jeg lærte at én bruker kan skrive mange innlegg, og at én kunde kan ha mange 
 Jeg har fullført tirsdagens grunnoppgave.
 
 
-Onsdag – fremmednøkler og flere relasjoner
+## Onsdag – fremmednøkler og flere relasjoner
 
-Steg 1 – fremmednøkkel
+## bSteg 1 – fremmednøkkel
 
 <img width="949" height="425" alt="image" src="https://github.com/user-attachments/assets/0a36f46f-f3e5-47ab-a1b3-d222ff51320e" />
 
@@ -446,7 +446,7 @@ Det betyr at én kunde kan ha mange saker, men hver sak tilhører én kunde.
 
 Vi bruker KundeID for å koble tabellene sammen. Derfor trenger vi ikke å kopiere Navn og Epost inn i hver sak.
 
-Steg 2 – Koble Ansatt til Sak
+## Steg 2 – Koble Ansatt til Sak
 
 Jeg har koblet Ansatt og Sak sammen i FjordTek-modellen.
 
@@ -454,7 +454,7 @@ AnsattID er primærnøkkel (PK) i Ansatt og fremmednøkkel (FK) i Sak.
 
 Relasjonen er 1:M. Det betyr at én ansatt kan arbeide med mange supportsaker, men hver supportsak er tildelt én ansatt.
 
- Steg 3 – Samlet modell
+## Steg 3 – Samlet modell
 
 Jeg har laget en samlet ER-modell for FjordTek i dbdiagram.io.
 
@@ -473,7 +473,7 @@ Det er to 1:M-relasjoner i modellen:
 Hver sak tilhører én kunde og er tildelt én ansatt.
 
 
-Steg 4: Test modellen med eksempeldata
+## Steg 4: Test modellen med eksempeldata
 
 FjordTek – ER-modell
 
@@ -510,7 +510,7 @@ FjordTek-modellen har to 1:M-relasjoner.
 KundeID og AnsattID er fremmednøkler (FK) i Sak. Disse brukes til å koble tabellene sammen.
 
 
-Steg 5: Les relasjonene som setninger
+## Steg 5: Les relasjonene som setninger
 
 I denne oppgaven har jeg jobbet med ER-modellen for FjordTek. Målet er å forstå hvordan tabellene Kunde, Sak og Ansatt er koblet sammen.
 
@@ -571,7 +571,7 @@ Jeg har også lært at fremmednøkler brukes for å koble tabellene sammen.
 FjordTek-modellen viser to 1:M-relasjoner mellom Kunde, Ansatt og Sak.
 
 
-Stage 6. Finn riktig sted for fremmednøkkelen
+## Stage 6. Finn riktig sted for fremmednøkkelen
 
 
 <img width="949" height="436" alt="image" src="https://github.com/user-attachments/assets/11b678b4-938d-44b1-8fb6-a1d74cebd523" />
@@ -588,7 +588,7 @@ Fremmednøkkelen ligger i Produkt fordi hvert produkt må være koblet til rikti
 
 Jeg har lært at fremmednøkkelen skal plasseres på mange-siden (M) i en 1:M-relasjon.
 
-Onsdagens grunnoppgave – FjordTek
+## Onsdagens grunnoppgave – FjordTek
 
 1. Hva er forskjellen mellom PK og FK?
 
@@ -615,21 +615,392 @@ Jeg har laget en ER-modell for FjordTek med to 1:M-relasjoner.
 Jeg har også testet modellen med eksempeldata og laget en egen ER-modell for Kategori og Produkt.
 
 Jeg har lært forskjellen mellom primærnøkkel (PK) og fremmednøkkel (FK), og hvordan fremmednøkler kobler tabeller sammen.
+
+
+## Torsdag – GDPR og ansvarlig databasedesign
+
+##  Steg 1 – Personopplysninger
+
+I denne oppgaven har jeg sett på hvilke personopplysninger som finnes i FjordTek-modellen.
+
+Personopplysninger er informasjon som kan brukes til å finne ut hvem en person er.
+
+Personopplysninger i FjordTek
+
+I tabellen Kunde har jeg disse feltene:
+
+KundeID: Et nummer som viser hvilken kunde det er.
+
+Navn: Navnet til kunden.
+
+Epost: E-postadressen til kunden.
+
+Telefon: Telefonnummeret til kunden.
+
+Disse opplysningene kan brukes til å finne eller kontakte en bestemt person.
+
+KundeID kan også være en personopplysning fordi nummeret kan kobles til en kunde.
+
+Hva er GDPR?
+
+GDPR er regler som beskytter personopplysninger.
+
+Reglene sier hvordan vi skal samle inn, bruke, beskytte og slette informasjon om personer.
+
+Hvorfor er GDPR viktig?
+
+GDPR er viktig fordi vi må ta vare på private opplysninger.
+
+Vi skal bare samle inn informasjon vi trenger, og vi må passe på at uvedkommende ikke får tilgang til den.
+
+Konklusjon
+
+Jeg har lært hva personopplysninger er, og hvorfor GDPR er viktig.
+
+Jeg har også lært at informasjon som Navn, Epost, Telefon og KundeID må behandles på en trygg måte.
+
+## Steg 2 – Dataminimering
+Hva er dataminimering?
+
+Dataminimering betyr at vi bare samler inn personopplysninger som vi trenger.
+
+I FjordTek bruker vi et system for å hjelpe kunder med supportsaker.
+
+Hvilke opplysninger trenger vi?
+
+Vi kan trenge:
+
+Navn: For å vite hvem kunden er.
+
+Epost: For å kontakte kunden.
+
+KundeID: For å koble kunden til riktig sak.
+
+Hvilke opplysninger trenger vi ikke?
+
+Vi trenger normalt ikke:
+
+Fødselsdato: Kundens fødselsdato.
+
+Personnummer: Kundens personnummer.
+
+Privat adresse: Kundens hjemmeadresse.
+
+Vi skal ikke samle inn disse opplysningene hvis de ikke er nødvendige.
+
+Hvorfor er dataminimering viktig?
+
+Dataminimering er viktig fordi vi skal beskytte kundenes personopplysninger.
+
+Jo mindre unødvendig informasjon vi lagrer, desto mindre informasjon kan komme på avveie.
+
+Konklusjon
+
+Jeg har lært at vi bare skal samle inn personopplysninger som vi trenger.
+
+I FjordTek skal vi unngå å lagre unødvendige opplysninger om kundene.
+
+
+## Steg 3 – Relasjoner og personvern
+
+Hva betyr relasjoner og personvern?
+
+I FjordTek-modellen har jeg tabellene Kunde og Sak.
+
+Disse tabellene er koblet sammen med KundeID.
+
+Hvordan fungerer koblingen?
+
+I tabellen Sak finnes KundeID som fremmednøkkel (FK).
+
+KundeID peker til tabellen Kunde, der KundeID er primærnøkkel (PK).
+
+Gjennom denne koblingen kan vi finne kundens navn og e-postadresse.
+
+For eksempel kan vi bruke KundeID i en sak for å finne ut hvilken kunde saken tilhører.
+
+Hvorfor er dette viktig for personvern?
+
+En tabell kan se ut som om den ikke inneholder personopplysninger.
+
+Men når vi kobler den til en annen tabell, kan vi finne informasjon om en bestemt person.
+
+Derfor må vi beskytte personopplysninger i hele databasen.
+
+Konklusjon
+
+Jeg har lært at relasjoner kan gjøre informasjon personidentifiserbar.
+
+Vi må derfor kontrollere hele ER-modellen, ikke bare én tabell.
+
+
+
+## Steg 4 – Formål og tilgang
+
+Hva betyr formål?
+
+Formål betyr hvorfor vi samler inn personopplysninger.
+
+I FjordTek skal vi bare samle inn informasjon som vi trenger for å hjelpe kundene.
+
+Hvilke opplysninger trenger vi?
+
+Navn: Vi trenger navn for å vite hvilken kunde saken gjelder.
+
+Epost: Vi kan trenge e-post for å kontakte kunden.
+
+Telefon: Vi må vurdere om vi trenger telefonnummer, eller om e-post er nok.
+
+Fødselsdato: Vi trenger vanligvis ikke fødselsdato for å løse en supportsak.
+
+Personnummer: Vi trenger normalt ikke personnummer i et vanlig kundestøttesystem.
+
+Hva er tilgangsstyring?
+
+Tilgangsstyring betyr at vi bestemmer hvem som kan lese eller endre informasjon i databasen.
+
+Ansatte skal bare ha tilgang til opplysninger de trenger for å gjøre jobben sin.
+
+Dette kalles minste privilegium.
+
+Hvorfor er dette viktig?
+
+Det er viktig for å beskytte kundenes personopplysninger og hindre at uvedkommende får tilgang til privat informasjon.
+
+Konklusjon
+
+Jeg har lært at vi må ha en god grunn til å samle inn personopplysninger.
+
+Jeg har også lært at ansatte bare skal ha tilgang til informasjon de trenger for arbeidsoppgavene sine.
+
+
+
+
+## Steg 5 – Personvernkontroll
+
+<img width="741" height="238" alt="image" src="https://github.com/user-attachments/assets/ef7c12a8-1a68-4622-921b-e93653998297" />
+
+I denne oppgaven har jeg kontrollert personopplysninger i FjordTek-modellen.
+
+Jeg har markert tre personopplysninger i ER-diagrammet i dbdiagram.io:
+
+Navn
+
+Epost
+
+Telefon
+
+Jeg skal forklare hvorfor vi trenger disse opplysningene, hvem som kan se dem, om de kan fjernes, og hva som kan skje hvis informasjonen kommer på avveie.
+
+1. Navn
+
+Hvorfor trenger systemet opplysningen?
+
+Systemet trenger navn for å vite hvilken kunde saken gjelder.
+
+Hvem bør kunne se den?
+
+Ansatte som jobber med kundestøtte og trenger kundens navn.
+
+Kan feltet fjernes?
+
+Ja, hvis KundeID er nok til å finne riktig kunde. Men navn kan være nyttig når vi hjelper kunden.
+
+Hva kan skje dersom opplysningen kommer på avveie?
+
+Andre personer kan få vite hvem kunden er. Dette kan være et problem for personvernet.
+
+2. Epost
+
+Hvorfor trenger systemet opplysningen?
+
+Vi trenger e-post for å kunne kontakte kunden og svare på supportsaker.
+
+Hvem bør kunne se den?
+
+Ansatte som trenger å kontakte kunden.
+
+Kan feltet fjernes?
+
+Ja, hvis vi har en annen trygg måte å kontakte kunden på. Men e-post er nyttig i kundestøtte.
+
+Hva kan skje dersom opplysningen kommer på avveie?
+
+Kunden kan få spam eller falske e-poster. Andre kan også prøve å lure kunden.
+
+3. Telefon
+Hvorfor trenger systemet opplysningen?
+
+Telefonnummer kan brukes hvis vi må ringe kunden om en supportsak.
+
+Hvem bør kunne se den?
+
+Bare ansatte som trenger å ringe kunden.
+
+Kan feltet fjernes?
+
+Ja, hvis e-post er nok til å hjelpe kunden, trenger vi kanskje ikke telefonnummer.
+
+Hva kan skje dersom opplysningen kommer på avveie?
+
+Kunden kan få uønskede telefoner eller falske meldinger.
+
+4. Hvorfor er personvernkontroll viktig?
+
+Personvernkontroll er viktig fordi vi må beskytte kundenes private informasjon.
+
+Vi skal bare samle inn opplysninger vi trenger. Ansatte skal bare ha tilgang til informasjon som er nødvendig for jobben deres.
+
+Dette følger prinsippene om dataminimering og minste privilegium.
+
+Konklusjon
+
+Jeg har markert Navn, Epost og Telefon som personopplysninger i FjordTek-diagrammet.
+
+Jeg har lært hvorfor vi trenger opplysningene, hvem som bør kunne se dem, og hvilke problemer som kan oppstå hvis informasjonen kommer på avveie.
+
+Jeg har også lært at vi ikke skal lagre mer informasjon enn nødvendig, og at vi må beskytte kundenes personopplysninger.
+
+Database Diagram Tool - Free ER Diagram Design
+
+Draw database relationship diagrams in seconds by writing simple DBML code. Free, fast, and built for developers and data analysts.
+
+
  
 
+## Steg 6: Hvor lenge skal data beholdes?
+
+I denne oppgaven har jeg lært hvor lenge vi bør lagre personopplysninger i FjordTek.
+
+Vi skal ikke lagre personopplysninger lenger enn nødvendig.
+
+1. Bør en avsluttet supportsak ligge i databasen for alltid?
+
+Nei, en avsluttet supportsak bør normalt ikke lagres for alltid.
+
+Vi kan beholde saken en stund hvis vi trenger informasjonen senere.
+
+Når vi ikke trenger informasjonen lenger, bør vi slette den eller fjerne personopplysninger.
+
+2. Bør en kunde som ikke lenger bruker tjenesten fortsatt ha alle personopplysninger lagret uten noen vurdering?
+
+Nei, vi bør kontrollere hvilke opplysninger vi fortsatt trenger.
+
+Hvis kunden ikke bruker tjenesten lenger, bør vi vurdere å slette unødvendige personopplysninger.
+
+Noen opplysninger må kanskje beholdes en periode på grunn av regler eller andre nødvendige formål.
+
+3. Hvorfor er dette viktig?
+
+Dette er viktig fordi vi må beskytte kundenes personopplysninger.
+
+Vi bør ha gode rutiner for å kontrollere og slette informasjon vi ikke trenger.
+
+Databasen bør også være laget slik at det er mulig å rydde opp i gamle data.
+
+Konklusjon
+
+Jeg har lært at personopplysninger ikke skal lagres lenger enn nødvendig.
+
+I FjordTek bør vi ha rutiner for sletting og opprydding av gamle supportsaker og kundeopplysninger.
 
 
 
+## Torsdagens grunnoppgave – GDPR og ansvarlig databasedesign
+
+Prosjekt: FjordTek
+
+I denne oppgaven har jeg jobbet med personvern i FjordTek-modellen.
 
 
+<img width="741" height="238" alt="image" src="https://github.com/user-attachments/assets/e7dac586-4536-4cd1-a8d0-bb864926c961" />
 
 
+Jeg har brukt ER-diagrammet fra onsdag og markert tre personopplysninger i tabellen Kunde:
+
+Navn
+
+Epost
+
+Telefon
+
+Jeg har også vurdert hvilke opplysninger vi trenger, og hvem som bør ha tilgang til dem.
+
+2. Personvernvurdering
+
+Et felt som bør beholdes:
+
+KundeID bør beholdes fordi det brukes til å koble kunden til riktig supportsak.
+
+Et felt som kan være unødvendig:
+
+Telefon kan være unødvendig hvis vi kan kontakte kunden med e-post.
+
+Hvem bør ha tilgang?
+
+Bare ansatte som trenger opplysningene for å gjøre jobben sin, bør ha tilgang. Andre skal ikke kunne se eller endre informasjonen.
+
+3. Spørsmål og svar
+
+1. Hva betyr dataminimering?
+
+Dataminimering betyr at vi bare samler inn personopplysninger som vi trenger.
+
+2. Hvorfor kan KundeID være en personopplysning?
+
+KundeID kan være en personopplysning fordi det kan kobles til en bestemt kunde.
+
+3. Hvorfor må vi se på relasjonene når vi vurderer personvern?
+
+Fordi relasjonene kobler tabellene sammen. Vi kan for eksempel bruke KundeID i Sak for å finne kundens navn og e-post.
+
+4. Hvorfor bør tilgang til databasen begrenses?
+
+For å beskytte personopplysninger. Bare ansatte som trenger informasjonen for jobben sin, bør ha tilgang.
+
+5. Hva betyr det at personopplysninger ikke bør lagres lenger enn nødvendig?
+
+Det betyr at vi skal slette eller rydde opp i personopplysninger når vi ikke trenger dem lenger, så lenge ingen regler krever at de beholdes.
+
+6. Hvorfor bør vi vurdere formålet før vi legger til et nytt felt i databasen?
+
+Fordi vi må vite hvorfor vi trenger informasjonen. Vi bør ikke samle inn unødvendige personopplysninger.
+
+4. Konklusjon
+
+Jeg har lært at GDPR handler om å beskytte personopplysninger.
+
+Jeg har også lært at vi bare skal samle inn informasjon vi trenger, begrense hvem som har tilgang, og ikke lagre personopplysninger lenger enn 
+nødvendig.
+
+ER-modellen må være laget slik at vi kan beskytte og slette personopplysninger på en trygg måte.
 
 
+## Videre utforskning – Torsdag
 
+Forskjellen mellom vanlige personopplysninger og særlige kategorier
 
+Vanlige personopplysninger er informasjon som kan brukes til å kjenne igjen en person.
 
+Eksempler er navn, e-postadresse og telefonnummer.
 
+Særlige kategorier av personopplysninger er informasjon som trenger ekstra beskyttelse.
+
+Eksempler er helseopplysninger, religion og politiske meninger.
+
+Et eksempel på informasjon jeg ville vært ekstra forsiktig med å lagre
+
+Jeg ville vært ekstra forsiktig med å lagre helseopplysninger.
+
+Dette er privat informasjon som kan være skadelig for personen hvis andre får tilgang til den.
+
+I FjordTek trenger vi vanligvis ikke helseopplysninger for å hjelpe kunder med supportsaker.
+
+Konklusjon
+
+Jeg har lært forskjellen mellom vanlige personopplysninger og særlige kategorier av personopplysninger.
+
+Vi bør bare lagre informasjon som er nødvendig, og beskytte sensitive opplysninger ekstra godt.
 
 
 
