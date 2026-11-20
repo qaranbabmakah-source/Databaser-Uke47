@@ -1,6 +1,6 @@
 # Ukeplan – databaser: struktur, ER-diagram, relasjoner og GDPR
 
-Mandag – Steg 1: Start med behovet 
+## Mandag – Steg 1: Start med behovet 
 
 Forstå hvorfor FjordTek trenger en database, og hvilken informasjon systemet skal lagre.
 
@@ -27,7 +27,7 @@ Det er viktig å forstå behovene før vi begynner å lage databasetabeller. Da 
 Jeg har forstått at FjordTek trenger en database med informasjon om kunder, ansatte og supportsaker. Dette blir grunnlaget for tabellene og ER-diagrammet som skal lages senere.
 
 
-Steg 2 – Tabell, rad og felt
+## Steg 2 – Tabell, rad og felt
 
 <img width="945" height="498" alt="image" src="https://github.com/user-attachments/assets/743ceed4-75cd-4b92-8aba-76af39a10385" />
 
@@ -53,7 +53,7 @@ Jeg klarte å lage Kunde-tabellen i dbdiagram. Jeg brukte KundeID som primærnø
 
 Jeg lærte hvordan en enkel databasetabell fungerer, og forskjellen mellom tabell, rad og felt.
 
-Steg 3 – entitet og tabell
+## Steg 3 – entitet og tabell
 
 <img width="945" height="426" alt="image" src="https://github.com/user-attachments/assets/9564bd9d-2686-4498-aa64-a9cac3166ac5" />
 
@@ -66,7 +66,7 @@ Jeg laget tre separate tabeller fordi FjordTek trenger å holde oversikt over ku
 Resultat: Jeg fikk laget alle tre tabellene i dbdiagram.io.
 
 
-Steg 4 – velg felter
+## Steg 4 – velg felter
 
 <img width="945" height="433" alt="image" src="https://github.com/user-attachments/assets/2b4c7385-256b-4957-855c-f5dcffd65d18" />
 
@@ -85,7 +85,7 @@ Resultat: Alle tre tabellene har nå fire felter.
 Jeg lærte at det er viktig å plassere informasjonen i riktig tabell før man lager relasjoner.
 
 
-Steg 5 – Primærnøkkel (PK)
+## Steg 5 – Primærnøkkel (PK)
 
 Jeg markerte KundeID, AnsattID og SakID som primærnøkler (PK) i dbdiagram.io.
 
@@ -97,7 +97,7 @@ Jeg bruker en egen ID fordi flere personer kan ha samme navn, og navn og e-post 
 
 Resultat: Alle tre tabellene har en primærnøkkel.
 
-Steg 6 – et første møte med datatyper
+## Steg 6 – et første møte med datatyper
 
 Jeg brukte forskjellige datatyper i dbdiagram.io.
 
@@ -114,7 +114,7 @@ Resultat: Alle feltene i de tre tabellene har passende datatyper.
 Jeg lærte at datatyper bestemmer hvilken type informasjon som kan lagres i hvert felt.
 
 
-Steg 7 – første relasjon: Kunde og Sak
+## Steg 7 – første relasjon: Kunde og Sak
 
 <img width="947" height="424" alt="image" src="https://github.com/user-attachments/assets/93dc814a-89d2-474e-bd09-cdb4d929fd17" />
 
@@ -138,11 +138,11 @@ Jeg klarte å koble Kunde og Sak sammen. Relasjonen vises som en linje i ER-diag
 
 Jeg lærte hvordan to tabeller kan kobles sammen ved hjelp av KundeID.
 
-Steg 8 – tegn fra en ny spesifikasjon
+## Steg 8 – tegn fra en ny spesifikasjon
 
 <img width="950" height="430" alt="image" src="https://github.com/user-attachments/assets/c6d6433c-5a8e-4b20-a1d8-8a71461b9b52" />
 
-Oppgave A – Avdeling og Ansatt
+## Oppgave A – Avdeling og Ansatt
 
 Hva gjorde jeg?
 
@@ -178,7 +178,7 @@ Resultat:
 
 Jeg klarte å lage begge tabellene og koble dem sammen i dbdiagram.
 
-Oppgave B – Produkt og Kategori
+## Oppgave B – Produkt og Kategori
 
 <img width="957" height="425" alt="image" src="https://github.com/user-attachments/assets/22f89c40-c276-4de2-a082-8dfc774d1bed" />
 
@@ -226,7 +226,7 @@ Jeg brukte primærnøkler (PK) for å identifisere hver rad og fremmednøkler (F
 Jeg lærte også hvordan en 1:M-relasjon fungerer.
 
 
-Mandagens grunnoppgave
+## Mandagens grunnoppgave
 
 1.	Hva er forskjellen mellom tabell, rad og felt?
 
@@ -286,7 +286,7 @@ Hva lærte jeg?
 Jeg lærte hvordan et biblioteksystem kan organiseres med flere tabeller, primærnøkler og relasjoner.
 
 
-Tirsdag – les spesifikasjoner og tegn enkle relasjoner
+## Tirsdag – les spesifikasjoner og tegn enkle relasjoner
 
 Stage 1 Oppgave – bruker og innlegg
 
@@ -334,7 +334,7 @@ Jeg klarte å lage begge tabellene, markere primærnøkler og lage en 1:M-relasj
 
 Jeg lærte hvordan primærnøkler (PK) og fremmednøkler (FK) brukes for å koble sammen tabeller.
 
-Steg 2 – kontroller modellen
+## Steg 2 – kontroller modellen
 
 Har begge tabellene en tydelig primærnøkkel?
 
@@ -353,7 +353,7 @@ Hvorfor bør ikke Brukernavn kopieres inn i hvert innlegg?
 Fordi BrukerID allerede viser hvem som har skrevet innlegget. Da unngår vi å lagre samme informasjon flere ganger.
 
 
-Steg 3 – oppgave B: kunde og bestilling
+## Steg 3 – oppgave B: kunde og bestilling
 
 <img width="956" height="436" alt="image" src="https://github.com/user-attachments/assets/7b387c2c-c806-4677-86d2-61798dc83798" />
 
@@ -395,7 +395,7 @@ Jeg klarte å lage begge tabellene, markere primærnøkler (PK) og lage en 1:M-r
 
 Jeg lærte hvordan primærnøkler og fremmednøkler brukes for å koble sammen tabeller og organisere informasjon i en database.
 
-Steg 4 – sammenlign de to modellene
+## Steg 4 – sammenlign de to modellene
 
 Hva er likt mellom de to relasjonene?
 
@@ -412,7 +412,7 @@ Jeg lærte at ulike databaser kan ha samme type relasjon, selv om de lagrer fors
 
 Begge modellene viser at én rad i den første tabellen kan være koblet til mange rader i den andre tabellen.
 
-Tirsdagens grunnoppgave
+## Tirsdagens grunnoppgave
 
 Jeg laget to ER-diagrammer i dbdiagram.io: Bruker og Innlegg, og Kunde og Bestilling.
 
@@ -1001,6 +1001,135 @@ Konklusjon
 Jeg har lært forskjellen mellom vanlige personopplysninger og særlige kategorier av personopplysninger.
 
 Vi bør bare lagre informasjon som er nødvendig, og beskytte sensitive opplysninger ekstra godt.
+
+## Fredag – oppsummering, Jobbklar
+
+# Fredag – Oppsummeringsoppgave
+
+## ER-modell: Avdeling og Ansatt
+
+<img width="957" height="416" alt="image" src="https://github.com/user-attachments/assets/4e3df5b1-4e4d-4056-bba1-98cfe1c423f0" />
+
+
+I denne oppgaven har jeg jobbet med en ER-modell i dbdiagram.io.
+
+Jeg har brukt to tabeller: Avdeling og Ansatt.
+
+Målet er å vise hvordan tabellene er koblet sammen med en 1:M-relasjon.
+
+### 2. Tabellen Avdeling
+
+Tabellen Avdeling inneholder:
+
+- **AvdelingID:** integer (PK)
+- **Navn:** varchar
+
+AvdelingID er primærnøkkel (PK). Den brukes til å identifisere hver avdeling.
+
+### 3. Tabellen Ansatt
+
+Tabellen Ansatt inneholder:
+
+- **AnsattID:** integer (PK)
+- **Navn:** varchar
+- **Epost:** varchar
+- **AvdelingID:** integer (FK)
+
+AnsattID er primærnøkkel (PK).
+
+AvdelingID er fremmednøkkel (FK) og kobler Ansatt til Avdeling.
+
+### 4. Relasjonen mellom Avdeling og Ansatt
+
+Én avdeling kan ha mange ansatte, men hver ansatt tilhører én avdeling.
+
+Dette er en **1:M-relasjon (én-til-mange)**.
+
+AvdelingID ligger i Ansatt fordi vi må vite hvilken avdeling den ansatte tilhører.
+
+### 5. Arbeid i dbdiagram.io
+
+Jeg har laget og kontrollert ER-diagrammet i dbdiagram.io.
+
+Jeg har markert primærnøklene og fremmednøkkelen.
+
+Diagrammet viser en linje mellom Avdeling og Ansatt med 1 på Avdeling-siden og M på Ansatt-siden.
+
+### 6. Konklusjon
+
+Jeg har lært hvordan jeg kan lage en ER-modell med to tabeller.
+
+Jeg forstår forskjellen mellom PK og FK.
+
+Jeg har også lært at én avdeling kan ha mange ansatte, men hver ansatt tilhører én avdeling.
+
+
+# Fredag – Oppsummering og Jobbklar
+
+## 1. Forklar kjeden
+
+**Behov → Tabell → PK → Relasjon → FK → ER-modell → Personvern**
+
+### Behov
+Først må vi forstå hva systemet skal brukes til, og hvilken informasjon vi trenger.
+
+### Tabell
+
+Vi lager tabeller for å lagre informasjon. For eksempel Avdeling og Ansatt.
+
+### PK – Primærnøkkel
+
+En primærnøkkel gir hver rad i en tabell en unik ID.
+
+For eksempel er AnsattID primærnøkkel i Ansatt.
+
+### Relasjon
+
+En relasjon viser hvordan to tabeller henger sammen.
+
+For eksempel kan én avdeling ha mange ansatte.
+
+### FK – Fremmednøkkel
+En fremmednøkkel brukes til å koble sammen tabeller.
+
+AvdelingID er fremmednøkkel i Ansatt.
+
+### ER-modell
+En ER-modell viser tabeller, felter og relasjoner.
+
+Jeg har brukt dbdiagram.io for å lage ER-modeller.
+
+### Personvern
+
+Personvern betyr at vi må beskytte personopplysninger.
+
+Vi skal bare samle inn informasjon vi trenger, og passe på hvem som får tilgang til den.
+
+## 2. Jobbklar – Mine ferdigheter
+
+Dette er fem ferdigheter jeg har lært, og som jeg kan beskrive til en arbeidsgiver.
+
+1. Jeg kan gjøre en enkel kravbeskrivelse om til tabeller og felter.
+
+2. Jeg kan markere primærnøkler (PK) og fremmednøkler (FK).
+
+3. Jeg kan tegne og forklare en 1:M-relasjon.
+
+4. Jeg kan lese et enkelt ER-diagram og forklare hvordan tabellene henger sammen.
+
+5. Jeg kan vurdere hvilke personopplysninger en datamodell inneholder.
+
+## 3. Konklusjon
+
+Denne uken har jeg lært å lage enkle ER-modeller i dbdiagram.io.
+
+Jeg har lært hvordan tabeller kobles sammen med primærnøkler og fremmednøkler.
+
+Jeg har også lært hvorfor personvern og GDPR er viktig når vi lager databaser.
+
+Jeg kan bruke denne kunnskapen i videre arbeid med databaser og utviklingsprosjekter.
+
+
 
 
 
